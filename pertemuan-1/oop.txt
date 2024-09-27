@@ -1,0 +1,53 @@
+<?php
+    class Mobil
+    {
+        public $mobil = 'Xenia';
+    }
+
+    $mobil = new Mobil;
+    echo $mobil->mobil;
+
+<?php
+    class Mobil
+    {
+        public $mobil = 'Xenia';
+
+        public function setName($nama)
+        {
+            $this->mobil = $nama;
+        }
+
+        public function getName()
+        {
+            return $this->mobil;
+        }
+    }
+
+    $mobil = new Mobil;
+    $mobil->setName('Avanza');
+    echo $mobil->getName();
+
+<?php
+    class Mobil
+    {
+        public $mobil = 'Xenia';
+
+         function __construct()
+        {
+            echo "<br/> ini adalah isi method construct <br/>";
+        }
+
+         function __destruct()
+        {
+            echo "<br/> ini adalah isi method destruct <br/>";
+        }
+
+         function getName()
+        {
+            return $this->mobil;
+        }
+    }
+
+    $mobil = new Mobil;
+
+    echo $mobil->getName();
